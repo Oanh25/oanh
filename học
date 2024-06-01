@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Học Tập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcccb;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #333;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff9999;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #ff9999;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trang Web Học Tập Lớp 9</h1>
+    </header>
+    <nav>
+        <a href="#giai-toan">Giải Toán</a>
+        <a href="#van-mau">Bài Văn Mẫu</a>
+        <a href="#tai-lieu">Tài Liệu</a>
+        <a href="#ai-gia-su">AI & Gia Sư</a>
+        <a href="#tips-thi">Tips Thi</a>
+        <a href="#tro-chuyen">Trò Chuyện</a>
+    </nav>
+    <main>
+        <section id="giai-toan">
+            <h2>Giải Toán Lớp 9</h2>
+            <p>Nhập bài toán cần giải:</p>
+            <input type="text" id="math-problem" placeholder="Nhập bài toán...">
+            <button onclick="solveMath()">Giải</button>
+            <p id="math-solution"></p>
+        </section>
+        <section id="van-mau">
+            <h2>Bài Văn Mẫu</h2>
+            <p>Tham khảo các bài văn mẫu trong chương trình lớp 9:</p>
+            <ul>
+                <li>Bài văn mẫu 1</li>
+                <li>Bài văn mẫu 2</li>
+                <li>Bài văn mẫu 3</li>
+            </ul>
+        </section>
+        <section id="tai-lieu">
+            <h2>Chia Sẻ Tài Liệu</h2>
+            <p>Chia sẻ các tài liệu học tập môn Toán và Văn:</p>
+            <ul>
+                <li><a href="#">Tài liệu Toán</a></li>
+                <li><a href="#">Tài liệu Văn</a></li>
+            </ul>
+        </section>
+        <section id="ai-gia-su">
+            <h2>AI & Gia Sư</h2>
+            <p>Sử dụng AI để viết và sửa bài, cùng với sự hỗ trợ của gia sư thật:</p>
+            <button onclick="requestTutor()">Yêu cầu gia sư</button>
+            <button onclick="useAI()">Sử dụng AI</button>
+        </section>
+        <section id="tips-thi">
+            <h2>Tips Thi Tuyển Sinh</h2>
+            <p>Chia sẻ các tips và kinh nghiệm để thi tuyển sinh:</p>
+            <ul>
+                <li>Tip 1</li>
+                <li>Tip 2</li>
+                <li>Tip 3</li>
+            </ul>
+        </section>
+        <section id="tro-chuyen">
+            <h2>Trò Chuyện Tạo Động Lực</h2>
+            <p>Trò chuyện để tạo động lực và hỗ trợ tinh thần:</p>
+            <textarea placeholder="Nhập tin nhắn..."></textarea>
+            <button onclick="sendMessage()">Gửi</button>
+            <div id="chat-box"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Trang Web Học Tập Lớp 9</p>
+    </footer>
+    <script>
+        function solveMath() {
+            const problem = document.getElementById('math-problem').value;
+            // Logic giải toán sẽ được thêm vào đây
+            document.getElementById('math-solution').innerText = "Giải pháp của bài toán: " + problem;
+        }
+
+        function requestTutor() {
+            alert("Yêu cầu gia sư đã được gửi!");
+        }
+
+        function useAI() {
+            alert("AI đang viết/sửa bài của bạn!");
+        }
+
+        function sendMessage() {
+            const message = document.querySelector('textarea').value;
+            const chatBox = document.getElementById('chat-box');
+            const newMessage = document.createElement('p');
+            newMessage.innerText = "Bạn: " + message;
+            chatBox.appendChild(newMessage);
+            document.querySelector('textarea').value = '';
+        }
+    </script>
+</body>
+</html>
